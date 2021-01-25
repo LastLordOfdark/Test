@@ -22,3 +22,4 @@ def selection_sort(unsorted_data: list) -> list:
     :param unsorted_data Несортированные данные
     :return Сортированные данные
     """
+def bubble_sort(unsorted_data: list) -> list:
