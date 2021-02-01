@@ -51,7 +51,7 @@ def selection_sort(unsorted_data: list) -> list:
     _validate(unsorted_data)
     data = unsorted_data[:]
     for i in range(len(data) - 1):
-        for j in range (i + 1,len(data)):
-            if data[i] < data[i]:
-                data[i], data[i] = data[j], data[i]
+        for j in range (i + 1, len(data)):
+            if data[i] > data[i]:
+                data[i], data[j] = data[j], data[i]
     return data

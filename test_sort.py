@@ -13,7 +13,7 @@ NONVALID_LIST = [3, 'one', 4, 5, '-2']
 
 @pytest.mark.parametrize("test_list",  [DEFAULT_LIST, NEGATIVE_LIST,
                                         EMPTY_LIST])
-@pytest.mark.parametrize("test_list",  [sorting.bubble_sort,
+@pytest.mark.parametrize("test_func",  [sorting.bubble_sort,
                                         sorting.selection_sort,
                                         sorting.insert_sort])
 def test_all(test_list, test_func):
