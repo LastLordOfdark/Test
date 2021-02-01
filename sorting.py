@@ -24,25 +24,6 @@ def bubble_sort(unsorted_data: list) -> list:
     return data
 
 
-
-    _validate(unsorted_data)
-    data = unsorted_data[:]
-    for i in range(1, len(data)):
-        current = data[i]
-        while data[i] < data[j]:
-            data[i] = data[j]
-            data[j] - current
-            j = i - 1
-            while data[i] < data[j] and j >= 0:
-                data[i], data[j] = data[i], data[j]
-                j = i - 1
-            j = j+1
-            data[j] = current
-
-    return data
-
-
-
 def insert_sort(unsorted_data: list) -> list:
     """Сортировка методом пузырька
     :param unsorted_data Несортированные данные
