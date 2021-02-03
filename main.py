@@ -2,6 +2,7 @@
 Главный модуль программы
 Точка старта
 """
+
 import loader
 import sorting
 import click
@@ -29,7 +30,7 @@ def sorter(filename, algorithm):
     if filename is None:
              unsorted_data = loader.load_from_input()
     else:
-             unsorted_data = loader.load_from_filen(filename)
+             unsorted_data = loader.load_from_file(filename)
     print(unsorted_data)
 
     allowed_algorithms = [BUBBLE, INSERT, SELECTION]
@@ -39,9 +40,9 @@ def sorter(filename, algorithm):
         exit(1)
 
     if algorithm == BUBBLE:
-        sorter_data = sorting.bubble_sort(unsorted_data)
+        sorted_data = sorting.bubble_sort(unsorted_data)
     elif algorithm == INSERT:
-        sorter_data = sorting.insert_sort(unsorted_data)
+        sorted_data = sorting.insert_sort(unsorted_data)
     elif algorithm == SELECTION:
         sorted_data = sorting.selection_sort(unsorted_data)
 

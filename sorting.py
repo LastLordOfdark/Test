@@ -3,6 +3,9 @@
 """
 
 def _validate(input_list):
+    if not input_list:
+        raise RuntimeError('Список элементов пуст')
+
     for e in input_list:
         if not isinstance(e, int):
             raise RuntimeError(f'Элемент "{e}" не является числом')
