@@ -7,7 +7,6 @@ import loader
 import sorting
 import click
 
-
 BUBBLE = 'b'
 INSERT = 'i'
 SELECTION = 's'
@@ -19,18 +18,20 @@ if source == KEYBOARD:
 else:
     unsorted_data = load_from_filen(filename)
 """
+
+
 @click.command()
 @click.option('--filename', default=None,
               help='Имя файла с несортированными данными')
 @click.option('--algorithm', default=BUBBLE,
               help='Алгоритм сортировки.')
-def sorter(filename, algorithm):
+def sorter(filename, algorithm, sorted_data=None):
     """ Простая утилита для сортировки чисел"""
     print(filename, algorithm)
     if filename is None:
-             unsorted_data = loader.load_from_input()
+        unsorted_data = loader.load_from_input()
     else:
-             unsorted_data = loader.load_from_file(filename)
+        unsorted_data = loader.load_from_file(filename)
     print(unsorted_data)
 
     allowed_algorithms = [BUBBLE, INSERT, SELECTION]
@@ -48,8 +49,6 @@ def sorter(filename, algorithm):
 
     print('Несортированный массив:  ', *unsorted_data)
     print('Сортированный массив:  ', *sorted_data)
-
-
 
 
 if __name__ == '__main__':
