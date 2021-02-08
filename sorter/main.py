@@ -2,10 +2,9 @@
 Главный модуль программы
 Точка старта
 """
-
-import loader
-import sorting
+from sorter import loader, sorting
 import click
+
 
 BUBBLE = 'b'
 INSERT = 'i'
@@ -16,7 +15,7 @@ source, filename = parse_cmd()
 if source == KEYBOARD:
     unsorted_data = load_from_input()
 else:
-    unsorted_data = load_from_filen(filename)
+    unsorted_data = load_from_file(filename)
 """
 
 
